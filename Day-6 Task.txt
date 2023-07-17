@@ -1,0 +1,104 @@
+// 1. a) Write a constructor for the class Movie, which takes a String representing the title of the movie, 
+// a String representing the studio, and a String representing the rating as its arguments, and sets the 
+// respective class properties to these values.
+
+class Movie {
+  constructor(title, studio, rating = 'PG') {
+    this.title = title;
+    this.studio = studio;
+    this.rating = rating;
+  }
+
+  getRating() {
+    return `The rating is ${this.rating}`;
+  }
+}
+
+// Creating instances of the Movie class
+let casinoRoyale = new Movie('Casino Royale', 'Eon Productions', 'PG-13');
+let avengers = new Movie('Avenger Return', 'Marvel');
+
+console.log(casinoRoyale.getRating());
+console.log(avengers.getRating());  
+  
+//   // b) The constructor for the class Movie will set the class property rating to "PG" as default when no rating is provided.
+   
+//   class movie {
+//       constructor(title, studio, rating){
+//           this.title = title;
+//           this.studio = studio;
+//           this.rating = 'PG';
+//       }
+//   }
+  
+//   // d) Write a piece of code that creates an instance of the class Movie with the title “Casino Royale”,
+//   // the studio “Eon Productions”, and the rating “PG­13”
+  
+  
+//   let CasinoRoyale = new movie( 'Casino Royal', 'Eon Productions', 'PG13');
+//   let Avengers = new movie('Avenger Return','Marvel','PG');
+
+  //2.Circle - Class
+//Convert the UML diagram to Typescript class. - use number for double
+class Circle {
+  constructor(radius = 1.0, color = 'red') {
+    this.radius = radius;
+    this.color = color;
+  }
+
+  getRadius() {
+    return `(${this.radius}, ${this.color})`;
+  }
+
+  toString() {
+    return `(${this.radius}, ${this.color})`;
+  }
+}
+
+// Creating instances of the Circle class
+let circle = new Circle(); // default constructor
+let circle1 = new Circle(4, 5); // parameterized constructor with radius
+let circle2 = new Circle(5.5, 'blue'); // parameterized constructor with radius and color
+
+console.log(circle2.toString());
+
+
+  //3.Write a “person” class to hold all the details
+  
+//   class person {
+//     constructor (firstName, lastName, age,address,mobile) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.age = age;
+//         this.address = address;
+//         this.mobile = mobile;
+//         this.getFullName = function () {
+//             return this.firstName + " " + this.lastName;
+//         }
+//     }
+// }
+ 
+// let person1 = new person ('sachin', 'kumar', 25 ,'405,Lakshminagar,salem',8877665544, );
+// console.log(person1.age);
+// console.log(person1.getFullName());
+
+// 4.
+class UberFare {
+  constructor(city, fare, customerName) {
+    this.city = city;
+    this.fare = fare;
+    this.customerName = customerName;
+  }
+
+  getFareCity() {
+    return `Fare for the city is ${this.fare}`;
+  }
+}
+
+// Creating instances of the UberFare class
+let cityA = new UberFare('City A', 500, 'Customer 1');
+let cityB = new UberFare('City B', 1200, 'Customer 2');
+
+console.log(cityA.getFareCity());
+console.log(cityB.getFareCity());
+
